@@ -27,7 +27,7 @@ client.on('message', message => {
     })
     message.member.addRoles(addRoles, 'by roles bot')
       .catch(error => console.log(error))
-    let done
+    let done = ''
     if (addRoles.length) done += `役割(${names(addRoles)})を追加しました\n`
     if (error.length) done += `役割、${names(error)}が見つかりませんでした\n`
     message.reply(done)
