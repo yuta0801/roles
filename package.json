@@ -1,0 +1,29 @@
+{
+  "name": "roles",
+  "description": "A discord bot to add a person a role",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuta0801/roles.git"
+  },
+  "keywords": [
+    "discord",
+    "add",
+    "role"
+  ],
+  "author": "yuta0801",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuta0801/roles/issues"
+  },
+  "homepage": "https://github.com/yuta0801/roles#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "dotenv": "^4.0.0"
+  }
+}
