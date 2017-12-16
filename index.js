@@ -10,11 +10,11 @@ client.on('message', message => {
   const [cmd, subcmd, ...params] = message.content.split(' ')
   if (!['/roles', '/role', '/役割'].includes(cmd)) return
   const roles = message.guild.roles
-  const myrole = roles.find('name', client.user.username)
+  const myrole = roles.find(role => role.managed)
   if (!myrole) return message.reply('権限が見つかりませんでした')
   const pos = myrole.position
   const hasRoles = message.member.roles
-  const canAddRoles = roles.filterArray(role => {
+  const canAddRoles = roles.filter(role => {
     return role.position < pos && role.position !== 0
   })
   if (['list', 'all', '一覧'].includes(subcmd)) {
@@ -65,7 +65,7 @@ client.on('message', message => {
 client.login(process.env.TOKEN)
 
 function names(roles) {
-  if (!Array.isArray(roles)) roles = roles.map(e => e.name)
+  if (typeof roles[0] !== 'string') roles = roles.map(e => e.name)
   return `\`${roles.join('`, `')}\``
 }
 
