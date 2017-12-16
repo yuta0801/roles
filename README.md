@@ -14,8 +14,9 @@
 ## Usage
 
 1. clone `git clone https://github.com/yuta0801/roles.git`
-2. `.env.sample`を`.env`にコピーし、編集
-3. 実行 `node index.js`
+1. install `npm install`
+1. `.env.sample`を`.env`にコピーし、編集
+1. 実行 `node index.js`
 
 ## Author
 
