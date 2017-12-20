@@ -66,7 +66,7 @@ client.login(process.env.TOKEN)
 
 function names(roles) {
   if (typeof roles[0] !== 'string') roles = roles.map(e => e.name)
-  return `\`${roles.join('`, `')}\``
+  return roles.map(e => `\`${e}\``).join(', ')
 }
 
 function log(roles, msg) {
